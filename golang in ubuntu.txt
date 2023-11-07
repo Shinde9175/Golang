@@ -1,0 +1,979 @@
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-1012-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Nov  7 08:09:26 UTC 2023
+
+  System load:  0.37255859375     Processes:             101
+  Usage of /:   20.5% of 7.57GB   Users logged in:       0
+  Memory usage: 21%               IPv4 address for eth0: 172.31.44.71
+  Swap usage:   0%
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-44-71:~$ ubuntu
+ubuntu: command not found
+ubuntu@ip-172-31-44-71:~$ aws ec2 start-instances --instance-ids INSTANCE_ID
+Command 'aws' not found, but can be installed with:
+sudo snap install aws-cli  # version 1.15.58, or
+sudo apt  install awscli   # version 1.22.34-1
+See 'snap info aws-cli' for additional versions.
+ubuntu@ip-172-31-44-71:~$ wget https://golang.org/dl/goVERSION.linux-amd64.tar.gz
+--2023-11-07 08:13:55--  https://golang.org/dl/goVERSION.linux-amd64.tar.gz
+Resolving golang.org (golang.org)... 142.250.199.177, 2404:6800:4009:82d::2011
+Connecting to golang.org (golang.org)|142.250.199.177|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://go.dev/dl/goVERSION.linux-amd64.tar.gz [following]
+--2023-11-07 08:13:56--  https://go.dev/dl/goVERSION.linux-amd64.tar.gz
+Resolving go.dev (go.dev)... 216.239.38.21, 216.239.32.21, 216.239.34.21, ...
+Connecting to go.dev (go.dev)|216.239.38.21|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2023-11-07 08:13:56 ERROR 404: Not Found.
+
+ubuntu@ip-172-31-44-71:~$ wget https://golang.org/dl/go1.17.linux-amd64.tar.gz
+--2023-11-07 08:14:13--  https://golang.org/dl/go1.17.linux-amd64.tar.gz
+Resolving golang.org (golang.org)... 142.250.199.177, 2404:6800:4009:82d::2011
+Connecting to golang.org (golang.org)|142.250.199.177|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://go.dev/dl/go1.17.linux-amd64.tar.gz [following]
+--2023-11-07 08:14:14--  https://go.dev/dl/go1.17.linux-amd64.tar.gz
+Resolving go.dev (go.dev)... 216.239.32.21, 216.239.34.21, 216.239.38.21, ...
+Connecting to go.dev (go.dev)|216.239.32.21|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://dl.google.com/go/go1.17.linux-amd64.tar.gz [following]
+--2023-11-07 08:14:14--  https://dl.google.com/go/go1.17.linux-amd64.tar.gz
+Resolving dl.google.com (dl.google.com)... 142.250.192.110, 2404:6800:4009:80c::200e
+Connecting to dl.google.com (dl.google.com)|142.250.192.110|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 134787877 (129M) [application/x-gzip]
+Saving to: ‘go1.17.linux-amd64.tar.gz’
+
+go1.17.linux-amd64.tar.gz            100%[===================================================================>] 128.54M   112MB/s    in 1.1s    
+
+2023-11-07 08:14:16 (112 MB/s) - ‘go1.17.linux-amd64.tar.gz’ saved [134787877/134787877]
+
+ubuntu@ip-172-31-44-71:~$ sudo tar -C /usr/local -xzf goVERSION.linux-amd64.tar.gz
+tar (child): goVERSION.linux-amd64.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+ubuntu@ip-172-31-44-71:~$ -version
+-version: command not found
+ubuntu@ip-172-31-44-71:~$ list
+Command 'list' not found, did you mean:
+  command 'mist' from snap mist (master)
+  command 'mlist' from deb mblaze (1.1-1)
+  command 'lift' from deb lift (2.6.0-1)
+  command 'dist' from deb mmh (0.4-4)
+  command 'dist' from deb nmh (1.7.1-11)
+  command 'flist' from deb mmh (0.4-4)
+  command 'flist' from deb nmh (1.7.1-11)
+  command 'gist' from deb yorick (2.2.04+dfsg1-12)
+  command 'klist' from deb krb5-user (1.19.2-2ubuntu0.2)
+  command 'klist' from deb heimdal-clients (7.7.0+dfsg-3ubuntu1)
+  command 'last' from deb util-linux (2.37.2-4ubuntu3)
+  command 'hist' from deb loki (2.4.7.4-10)
+See 'snap info <snapname>' for additional versions.
+ubuntu@ip-172-31-44-71:~$ golang -version
+Command 'golang' not found, did you mean:
+  command 'olang' from snap olang (5.1)
+  command 'goland' from snap goland (2023.2.4)
+See 'snap info <snapname>' for additional versions.
+ubuntu@ip-172-31-44-71:~$ olang -version
+Command 'olang' not found, but can be installed with:
+sudo snap install olang
+ubuntu@ip-172-31-44-71:~$ sudo install golang
+install: missing destination file operand after 'golang'
+Try 'install --help' for more information.
+ubuntu@ip-172-31-44-71:~$ install --help
+Usage: install [OPTION]... [-T] SOURCE DEST
+  or:  install [OPTION]... SOURCE... DIRECTORY
+  or:  install [OPTION]... -t DIRECTORY SOURCE...
+  or:  install [OPTION]... -d DIRECTORY...
+
+This install program copies files (often just compiled) into destination
+locations you choose.  If you want to download and install a ready-to-use
+package on a GNU/Linux system, you should instead be using a package manager
+like yum(1) or apt-get(1).
+
+In the first three forms, copy SOURCE to DEST or multiple SOURCE(s) to
+the existing DIRECTORY, while setting permission modes and owner/group.
+In the 4th form, create all components of the given DIRECTORY(ies).
+
+Mandatory arguments to long options are mandatory for short options too.
+      --backup[=CONTROL]  make a backup of each existing destination file
+  -b                  like --backup but does not accept an argument
+  -c                  (ignored)
+  -C, --compare       compare each pair of source and destination files, and
+                        in some cases, do not modify the destination at all
+  -d, --directory     treat all arguments as directory names; create all
+                        components of the specified directories
+  -D                  create all leading components of DEST except the last,
+                        or all components of --target-directory,
+                        then copy SOURCE to DEST
+  -g, --group=GROUP   set group ownership, instead of process' current group
+  -m, --mode=MODE     set permission mode (as in chmod), instead of rwxr-xr-x
+  -o, --owner=OWNER   set ownership (super-user only)
+  -p, --preserve-timestamps   apply access/modification times of SOURCE files
+                        to corresponding destination files
+  -s, --strip         strip symbol tables
+      --strip-program=PROGRAM  program used to strip binaries
+  -S, --suffix=SUFFIX  override the usual backup suffix
+  -t, --target-directory=DIRECTORY  copy all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory  treat DEST as a normal file
+  -v, --verbose       print the name of each directory as it is created
+      --preserve-context  preserve SELinux security context
+  -Z                      set SELinux security context of destination
+                            file and each created directory to default type
+      --context[=CTX]     like -Z, or if CTX is specified then set the
+                            SELinux or SMACK security context to CTX
+      --help     display this help and exit
+      --version  output version information and exit
+
+The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/install>
+or available locally via: info '(coreutils) install invocation'
+ubuntu@ip-172-31-44-71:~$ sudo su
+root@ip-172-31-44-71:/home/ubuntu# list
+Command 'list' not found, did you mean:
+  command 'mist' from snap mist (master)
+  command 'gist' from deb yorick (2.2.04+dfsg1-12)
+  command 'klist' from deb krb5-user (1.19.2-2ubuntu0.2)
+  command 'klist' from deb heimdal-clients (7.7.0+dfsg-3ubuntu1)
+  command 'last' from deb util-linux (2.37.2-4ubuntu3)
+  command 'lift' from deb lift (2.6.0-1)
+  command 'mlist' from deb mblaze (1.1-1)
+  command 'flist' from deb mmh (0.4-4)
+  command 'flist' from deb nmh (1.7.1-11)
+  command 'hist' from deb loki (2.4.7.4-10)
+  command 'dist' from deb mmh (0.4-4)
+  command 'dist' from deb nmh (1.7.1-11)
+See 'snap info <snapname>' for additional versions.
+root@ip-172-31-44-71:/home/ubuntu# sudo atp install golang
+sudo: atp: command not found
+root@ip-172-31-44-71:/home/ubuntu# ssh -i "Sunil.pem" ubuntu@ec2-13-126-8-106.ap-south-1.compute.amazonaws.com
+Warning: Identity file Sunil.pem not accessible: No such file or directory.
+The authenticity of host 'ec2-13-126-8-106.ap-south-1.compute.amazonaws.com (172.31.44.71)' can't be established.
+ED25519 key fingerprint is SHA256:irEHO0zIf8hAgC3oei5Us8hIfK3z66cLG89GMYspjm4.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-13-126-8-106.ap-south-1.compute.amazonaws.com' (ED25519) to the list of known hosts.
+ubuntu@ec2-13-126-8-106.ap-south-1.compute.amazonaws.com: Permission denied (publickey).
+root@ip-172-31-44-71:/home/ubuntu# sudo apt update
+Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]
+Get:4 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:6 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]
+Get:7 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]
+Get:8 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]  
+Get:9 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]
+Get:10 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]
+Get:11 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1149 kB]
+Get:12 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [245 kB]
+Get:13 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [16.1 kB]
+Get:14 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1105 kB]
+Get:15 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [179 kB]
+Get:16 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [520 B]
+Get:17 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [999 kB]
+Get:18 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [219 kB]
+Get:19 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [22.1 kB]
+Get:20 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [41.6 kB]
+Get:21 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [9768 B]
+Get:22 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [472 B]
+Get:23 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [64.2 kB]
+Get:24 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [10.5 kB]
+Get:25 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+Get:26 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:27 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [27.8 kB]
+Get:28 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.4 kB]
+Get:29 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [644 B]
+Get:30 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:31 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [940 kB]
+Get:32 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [186 kB]
+Get:33 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [11.4 kB]
+Get:34 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1085 kB]
+Get:35 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [176 kB]
+Get:36 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [520 B]
+Get:37 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [797 kB]
+Get:38 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [146 kB]
+Get:39 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [16.8 kB]
+Get:40 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [36.5 kB]
+Get:41 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [7060 B]
+Get:42 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [260 B]
+Fetched 28.2 MB in 5s (5302 kB/s)                               
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+46 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@ip-172-31-44-71:/home/ubuntu# sudo apt install gpolang
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package gpolang
+root@ip-172-31-44-71:/home/ubuntu# sudo apt update
+Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+46 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@ip-172-31-44-71:/home/ubuntu# sudo apt install golang
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  bzip2 cpp cpp-11 fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base golang-1.18 golang-1.18-doc golang-1.18-go
+  golang-1.18-src golang-doc golang-go golang-src libasan6 libatomic1 libc-dev-bin libc-devtools libc6 libc6-dev libcc1-0 libcrypt-dev
+  libdeflate0 libdpkg-perl libfile-fcntllock-perl libfontconfig1 libgcc-11-dev libgd3 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8
+  libjpeg8 liblsan0 libmpc3 libnsl-dev libquadmath0 libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libxpm4 linux-libc-dev
+  manpages-dev pkg-config rpcsvc-proto
+Suggested packages:
+  bzip2-doc cpp-doc gcc-11-locales g++-multilib g++-11-multilib gcc-11-doc gcc-multilib make autoconf automake libtool flex bison gdb gcc-doc
+  gcc-11-multilib bzr | brz mercurial subversion glibc-doc debian-keyring bzr libgd-tools libstdc++-11-doc dpkg-dev
+Recommended packages:
+  libnss-nis libnss-nisplus
+The following NEW packages will be installed:
+  bzip2 cpp cpp-11 fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base golang golang-1.18 golang-1.18-doc golang-1.18-go
+  golang-1.18-src golang-doc golang-go golang-src libasan6 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libdeflate0
+  libdpkg-perl libfile-fcntllock-perl libfontconfig1 libgcc-11-dev libgd3 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 liblsan0
+  libmpc3 libnsl-dev libquadmath0 libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libxpm4 linux-libc-dev manpages-dev
+  pkg-config rpcsvc-proto
+The following packages will be upgraded:
+  libc6
+1 upgraded, 52 newly installed, 0 to remove and 45 not upgraded.
+Need to get 148 MB of archives.
+After this operation, 641 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6 amd64 2.35-0ubuntu3.4 [3234 kB]
+Get:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 bzip2 amd64 1.0.8-5build1 [34.8 kB]
+Get:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-base amd64 11.4.0-1ubuntu1~22.04 [20.2 kB]
+Get:4 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libisl23 amd64 0.24-2build1 [727 kB]
+Get:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libmpc3 amd64 1.2.1-2build1 [46.9 kB]
+Get:6 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11 amd64 11.4.0-1ubuntu1~22.04 [10.0 MB]
+Get:7 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 cpp amd64 4:11.2.0-1ubuntu1 [27.7 kB]
+Get:8 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 fonts-dejavu-core all 2.37-2build1 [1041 kB]
+Get:9 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 fontconfig-config all 2.13.1-4.2ubuntu5 [29.1 kB]
+Get:10 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcc1-0 amd64 12.3.0-1ubuntu1~22.04 [48.3 kB]
+Get:11 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1 amd64 12.3.0-1ubuntu1~22.04 [126 kB]
+Get:12 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1 amd64 12.3.0-1ubuntu1~22.04 [30.2 kB]
+Get:13 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1 amd64 12.3.0-1ubuntu1~22.04 [10.4 kB]
+Get:14 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6 amd64 11.4.0-1ubuntu1~22.04 [2282 kB]
+Get:15 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0 amd64 12.3.0-1ubuntu1~22.04 [1069 kB]
+Get:16 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0 amd64 11.4.0-1ubuntu1~22.04 [2260 kB]
+Get:17 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1 amd64 12.3.0-1ubuntu1~22.04 [976 kB]
+Get:18 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libquadmath0 amd64 12.3.0-1ubuntu1~22.04 [154 kB]
+Get:19 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev amd64 11.4.0-1ubuntu1~22.04 [2517 kB]
+Get:20 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11 amd64 11.4.0-1ubuntu1~22.04 [20.1 MB]
+Get:21 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 gcc amd64 4:11.2.0-1ubuntu1 [5112 B]
+Get:22 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-dev-bin amd64 2.35-0ubuntu3.4 [20.3 kB]
+Get:23 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-88.98 [1346 kB]
+Get:24 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libcrypt-dev amd64 1:4.4.27-1 [112 kB]
+Get:25 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu6 [68.5 kB]
+Get:26 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtirpc-dev amd64 1.3.2-2ubuntu0.1 [192 kB]
+Get:27 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libnsl-dev amd64 1.3.0-2build2 [71.3 kB]
+Get:28 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev amd64 2.35-0ubuntu3.4 [2100 kB]
+Get:29 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++-11-dev amd64 11.4.0-1ubuntu1~22.04 [2101 kB]
+Get:30 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 g++-11 amd64 11.4.0-1ubuntu1~22.04 [11.4 MB]
+Get:31 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 g++ amd64 4:11.2.0-1ubuntu1 [1412 B]
+Get:32 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 golang-1.18-doc all 1.18.1-1ubuntu1.1 [103 kB]
+Get:33 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 golang-1.18-src all 1.18.1-1ubuntu1.1 [16.2 MB]
+Get:34 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 golang-1.18-go amd64 1.18.1-1ubuntu1.1 [66.0 MB]
+Get:35 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 golang-1.18 all 1.18.1-1ubuntu1.1 [11.2 kB]
+Get:36 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 golang-src all 2:1.18~0ubuntu2 [4438 B]
+Get:37 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 golang-go amd64 2:1.18~0ubuntu2 [41.8 kB]
+Get:38 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 golang-doc all 2:1.18~0ubuntu2 [2784 B]
+Get:39 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 golang amd64 2:1.18~0ubuntu2 [2732 B]
+Get:40 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libfontconfig1 amd64 2.13.1-4.2ubuntu5 [131 kB]
+Get:41 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg-turbo8 amd64 2.1.2-0ubuntu1 [134 kB]
+Get:42 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg8 amd64 8c-2ubuntu10 [2264 B]
+Get:43 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libdeflate0 amd64 1.10-2 [70.9 kB]
+Get:44 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libjbig0 amd64 2.1-3.1ubuntu0.22.04.1 [29.2 kB]
+Get:45 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libwebp7 amd64 1.2.2-2ubuntu0.22.04.2 [206 kB]
+Get:46 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtiff5 amd64 4.3.0-6ubuntu0.6 [183 kB]
+Get:47 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxpm4 amd64 1:3.5.12-1ubuntu0.22.04.2 [36.7 kB]
+Get:48 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libgd3 amd64 2.3.0-2ubuntu2 [129 kB]
+Get:49 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-devtools amd64 2.35-0ubuntu3.4 [28.9 kB]
+Get:50 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libdpkg-perl all 1.21.1ubuntu2.2 [237 kB]
+Get:51 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libfile-fcntllock-perl amd64 0.22-3build7 [33.9 kB]
+Get:52 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 manpages-dev all 5.10-1ubuntu1 [2309 kB]
+Get:53 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 pkg-config amd64 0.29.2-1ubuntu3 [48.2 kB]
+Fetched 148 MB in 3s (59.0 MB/s)   
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+(Reading database ... 64726 files and directories currently installed.)
+Preparing to unpack .../libc6_2.35-0ubuntu3.4_amd64.deb ...
+Unpacking libc6:amd64 (2.35-0ubuntu3.4) over (2.35-0ubuntu3.3) ...
+Setting up libc6:amd64 (2.35-0ubuntu3.4) ...
+Selecting previously unselected package bzip2.
+(Reading database ... 64726 files and directories currently installed.)
+Preparing to unpack .../00-bzip2_1.0.8-5build1_amd64.deb ...
+Unpacking bzip2 (1.0.8-5build1) ...
+Selecting previously unselected package gcc-11-base:amd64.
+Preparing to unpack .../01-gcc-11-base_11.4.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking gcc-11-base:amd64 (11.4.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../02-libisl23_0.24-2build1_amd64.deb ...
+Unpacking libisl23:amd64 (0.24-2build1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../03-libmpc3_1.2.1-2build1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.2.1-2build1) ...
+Selecting previously unselected package cpp-11.
+Preparing to unpack .../04-cpp-11_11.4.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking cpp-11 (11.4.0-1ubuntu1~22.04) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../05-cpp_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking cpp (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../06-fonts-dejavu-core_2.37-2build1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-2build1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../07-fontconfig-config_2.13.1-4.2ubuntu5_all.deb ...
+Unpacking fontconfig-config (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../08-libcc1-0_12.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libcc1-0:amd64 (12.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../09-libgomp1_12.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libgomp1:amd64 (12.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../10-libitm1_12.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libitm1:amd64 (12.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../11-libatomic1_12.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libatomic1:amd64 (12.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libasan6:amd64.
+Preparing to unpack .../12-libasan6_11.4.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libasan6:amd64 (11.4.0-1ubuntu1~22.04) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../13-liblsan0_12.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking liblsan0:amd64 (12.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../14-libtsan0_11.4.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libtsan0:amd64 (11.4.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../15-libubsan1_12.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libubsan1:amd64 (12.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../16-libquadmath0_12.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libquadmath0:amd64 (12.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libgcc-11-dev:amd64.
+Preparing to unpack .../17-libgcc-11-dev_11.4.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libgcc-11-dev:amd64 (11.4.0-1ubuntu1~22.04) ...
+Selecting previously unselected package gcc-11.
+Preparing to unpack .../18-gcc-11_11.4.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking gcc-11 (11.4.0-1ubuntu1~22.04) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../19-gcc_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking gcc (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../20-libc-dev-bin_2.35-0ubuntu3.4_amd64.deb ...
+Unpacking libc-dev-bin (2.35-0ubuntu3.4) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../21-linux-libc-dev_5.15.0-88.98_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.15.0-88.98) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../22-libcrypt-dev_1%3a4.4.27-1_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.27-1) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../23-rpcsvc-proto_1.4.2-0ubuntu6_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.2-0ubuntu6) ...
+Selecting previously unselected package libtirpc-dev:amd64.
+Preparing to unpack .../24-libtirpc-dev_1.3.2-2ubuntu0.1_amd64.deb ...
+Unpacking libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
+Selecting previously unselected package libnsl-dev:amd64.
+Preparing to unpack .../25-libnsl-dev_1.3.0-2build2_amd64.deb ...
+Unpacking libnsl-dev:amd64 (1.3.0-2build2) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../26-libc6-dev_2.35-0ubuntu3.4_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.35-0ubuntu3.4) ...
+Selecting previously unselected package libstdc++-11-dev:amd64.
+Preparing to unpack .../27-libstdc++-11-dev_11.4.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libstdc++-11-dev:amd64 (11.4.0-1ubuntu1~22.04) ...
+Selecting previously unselected package g++-11.
+Preparing to unpack .../28-g++-11_11.4.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking g++-11 (11.4.0-1ubuntu1~22.04) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../29-g++_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking g++ (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package golang-1.18-doc.
+Preparing to unpack .../30-golang-1.18-doc_1.18.1-1ubuntu1.1_all.deb ...
+Unpacking golang-1.18-doc (1.18.1-1ubuntu1.1) ...
+Selecting previously unselected package golang-1.18-src.
+Preparing to unpack .../31-golang-1.18-src_1.18.1-1ubuntu1.1_all.deb ...
+Unpacking golang-1.18-src (1.18.1-1ubuntu1.1) ...
+Selecting previously unselected package golang-1.18-go.
+Preparing to unpack .../32-golang-1.18-go_1.18.1-1ubuntu1.1_amd64.deb ...
+Unpacking golang-1.18-go (1.18.1-1ubuntu1.1) ...
+Selecting previously unselected package golang-1.18.
+Preparing to unpack .../33-golang-1.18_1.18.1-1ubuntu1.1_all.deb ...
+Unpacking golang-1.18 (1.18.1-1ubuntu1.1) ...
+Selecting previously unselected package golang-src.
+Preparing to unpack .../34-golang-src_2%3a1.18~0ubuntu2_all.deb ...
+Unpacking golang-src (2:1.18~0ubuntu2) ...
+Selecting previously unselected package golang-go:amd64.
+Preparing to unpack .../35-golang-go_2%3a1.18~0ubuntu2_amd64.deb ...
+Unpacking golang-go:amd64 (2:1.18~0ubuntu2) ...
+Selecting previously unselected package golang-doc.
+Preparing to unpack .../36-golang-doc_2%3a1.18~0ubuntu2_all.deb ...
+Unpacking golang-doc (2:1.18~0ubuntu2) ...
+Selecting previously unselected package golang:amd64.
+Preparing to unpack .../37-golang_2%3a1.18~0ubuntu2_amd64.deb ...
+Unpacking golang:amd64 (2:1.18~0ubuntu2) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../38-libfontconfig1_2.13.1-4.2ubuntu5_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../39-libjpeg-turbo8_2.1.2-0ubuntu1_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../40-libjpeg8_8c-2ubuntu10_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu10) ...
+Selecting previously unselected package libdeflate0:amd64.
+Preparing to unpack .../41-libdeflate0_1.10-2_amd64.deb ...
+Unpacking libdeflate0:amd64 (1.10-2) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../42-libjbig0_2.1-3.1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Selecting previously unselected package libwebp7:amd64.
+Preparing to unpack .../43-libwebp7_1.2.2-2ubuntu0.22.04.2_amd64.deb ...
+Unpacking libwebp7:amd64 (1.2.2-2ubuntu0.22.04.2) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../44-libtiff5_4.3.0-6ubuntu0.6_amd64.deb ...
+Unpacking libtiff5:amd64 (4.3.0-6ubuntu0.6) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../45-libxpm4_1%3a3.5.12-1ubuntu0.22.04.2_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.2) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../46-libgd3_2.3.0-2ubuntu2_amd64.deb ...
+Unpacking libgd3:amd64 (2.3.0-2ubuntu2) ...
+Selecting previously unselected package libc-devtools.
+Preparing to unpack .../47-libc-devtools_2.35-0ubuntu3.4_amd64.deb ...
+Unpacking libc-devtools (2.35-0ubuntu3.4) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../48-libdpkg-perl_1.21.1ubuntu2.2_all.deb ...
+Unpacking libdpkg-perl (1.21.1ubuntu2.2) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../49-libfile-fcntllock-perl_0.22-3build7_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-3build7) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../50-manpages-dev_5.10-1ubuntu1_all.deb ...
+Unpacking manpages-dev (5.10-1ubuntu1) ...
+Selecting previously unselected package pkg-config.
+Preparing to unpack .../51-pkg-config_0.29.2-1ubuntu3_amd64.deb ...
+Unpacking pkg-config (0.29.2-1ubuntu3) ...
+Setting up gcc-11-base:amd64 (11.4.0-1ubuntu1~22.04) ...
+Setting up manpages-dev (5.10-1ubuntu1) ...
+Setting up libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.2) ...
+Setting up libfile-fcntllock-perl (0.22-3build7) ...
+Setting up libdeflate0:amd64 (1.10-2) ...
+Setting up linux-libc-dev:amd64 (5.15.0-88.98) ...
+Setting up libgomp1:amd64 (12.3.0-1ubuntu1~22.04) ...
+Setting up bzip2 (1.0.8-5build1) ...
+Setting up libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Setting up libasan6:amd64 (11.4.0-1ubuntu1~22.04) ...
+Setting up golang-1.18-doc (1.18.1-1ubuntu1.1) ...
+Setting up libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
+Setting up rpcsvc-proto (1.4.2-0ubuntu6) ...
+Setting up libquadmath0:amd64 (12.3.0-1ubuntu1~22.04) ...
+Setting up libmpc3:amd64 (1.2.1-2build1) ...
+Setting up libatomic1:amd64 (12.3.0-1ubuntu1~22.04) ...
+Setting up fonts-dejavu-core (2.37-2build1) ...
+Setting up golang-1.18-src (1.18.1-1ubuntu1.1) ...
+Setting up libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Setting up libdpkg-perl (1.21.1ubuntu2.2) ...
+Setting up libwebp7:amd64 (1.2.2-2ubuntu0.22.04.2) ...
+Setting up libubsan1:amd64 (12.3.0-1ubuntu1~22.04) ...
+Setting up libnsl-dev:amd64 (1.3.0-2build2) ...
+Setting up libcrypt-dev:amd64 (1:4.4.27-1) ...
+Setting up libisl23:amd64 (0.24-2build1) ...
+Setting up libc-dev-bin (2.35-0ubuntu3.4) ...
+Setting up golang-src (2:1.18~0ubuntu2) ...
+Setting up libcc1-0:amd64 (12.3.0-1ubuntu1~22.04) ...
+Setting up liblsan0:amd64 (12.3.0-1ubuntu1~22.04) ...
+Setting up libitm1:amd64 (12.3.0-1ubuntu1~22.04) ...
+Setting up libtsan0:amd64 (11.4.0-1ubuntu1~22.04) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu10) ...
+Setting up cpp-11 (11.4.0-1ubuntu1~22.04) ...
+Setting up fontconfig-config (2.13.1-4.2ubuntu5) ...
+Setting up golang-1.18-go (1.18.1-1ubuntu1.1) ...
+Setting up pkg-config (0.29.2-1ubuntu3) ...
+Setting up libgcc-11-dev:amd64 (11.4.0-1ubuntu1~22.04) ...
+Setting up gcc-11 (11.4.0-1ubuntu1~22.04) ...
+Setting up cpp (4:11.2.0-1ubuntu1) ...
+Setting up libc6-dev:amd64 (2.35-0ubuntu3.4) ...
+Setting up libtiff5:amd64 (4.3.0-6ubuntu0.6) ...
+Setting up libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Setting up golang-1.18 (1.18.1-1ubuntu1.1) ...
+Setting up golang-go:amd64 (2:1.18~0ubuntu2) ...
+Setting up gcc (4:11.2.0-1ubuntu1) ...
+Setting up libgd3:amd64 (2.3.0-2ubuntu2) ...
+Setting up libstdc++-11-dev:amd64 (11.4.0-1ubuntu1~22.04) ...
+Setting up golang-doc (2:1.18~0ubuntu2) ...
+Setting up libc-devtools (2.35-0ubuntu3.4) ...
+Setting up golang:amd64 (2:1.18~0ubuntu2) ...
+Setting up g++-11 (11.4.0-1ubuntu1~22.04) ...
+Setting up g++ (4:11.2.0-1ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.3) ...
+Scanning processes...                                                                                                                            
+Scanning candidates...                                                                                                                           
+Scanning linux images...                                                                                                                         
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+ systemctl restart acpid.service chrony.service cron.service multipathd.service packagekit.service polkit.service rsyslog.service serial-getty@ttyS0.service snapd.service ssh.service systemd-journald.service systemd-networkd.service systemd-resolved.service systemd-udevd.service
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart getty@tty1.service
+ systemctl restart networkd-dispatcher.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+ systemctl restart user@1000.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@ip-172-31-44-71:/home/ubuntu# wget https://golang.org/dl/goVERSION.linux-amd64.tar.gz
+--2023-11-07 08:24:29--  https://golang.org/dl/goVERSION.linux-amd64.tar.gz
+Resolving golang.org (golang.org)... 142.250.199.145, 2404:6800:4009:82d::2011
+Connecting to golang.org (golang.org)|142.250.199.145|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://go.dev/dl/goVERSION.linux-amd64.tar.gz [following]
+--2023-11-07 08:24:30--  https://go.dev/dl/goVERSION.linux-amd64.tar.gz
+Resolving go.dev (go.dev)... 216.239.36.21, 216.239.38.21, 216.239.32.21, ...
+Connecting to go.dev (go.dev)|216.239.36.21|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2023-11-07 08:24:30 ERROR 404: Not Found.
+
+root@ip-172-31-44-71:/home/ubuntu# wget https://golang.org/dl/go1.17.linux-amd64.tar.gz
+--2023-11-07 08:25:01--  https://golang.org/dl/go1.17.linux-amd64.tar.gz
+Resolving golang.org (golang.org)... 142.250.199.145, 2404:6800:4009:82d::2011
+Connecting to golang.org (golang.org)|142.250.199.145|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://go.dev/dl/go1.17.linux-amd64.tar.gz [following]
+--2023-11-07 08:25:01--  https://go.dev/dl/go1.17.linux-amd64.tar.gz
+Resolving go.dev (go.dev)... 216.239.38.21, 216.239.36.21, 216.239.34.21, ...
+Connecting to go.dev (go.dev)|216.239.38.21|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://dl.google.com/go/go1.17.linux-amd64.tar.gz [following]
+--2023-11-07 08:25:02--  https://dl.google.com/go/go1.17.linux-amd64.tar.gz
+Resolving dl.google.com (dl.google.com)... 172.217.166.46, 2404:6800:4009:832::200e
+Connecting to dl.google.com (dl.google.com)|172.217.166.46|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 134787877 (129M) [application/x-gzip]
+Saving to: ‘go1.17.linux-amd64.tar.gz.1’
+
+go1.17.linux-amd64.tar.gz.1          100%[===================================================================>] 128.54M   117MB/s    in 1.1s    
+
+2023-11-07 08:25:03 (117 MB/s) - ‘go1.17.linux-amd64.tar.gz.1’ saved [134787877/134787877]
+
+root@ip-172-31-44-71:/home/ubuntu# export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+root@ip-172-31-44-71:/home/ubuntu# export GOPATH=$HOME/go
+root@ip-172-31-44-71:/home/ubuntu# export PATH=$PATH:/user/local/go/bin
+root@ip-172-31-44-71:/home/ubuntu# export GOPATH=$HOME/go
+root@ip-172-31-44-71:/home/ubuntu# source ~/.bashrc
+root@ip-172-31-44-71:/home/ubuntu# go version
+go version go1.18.1 linux/amd64
+root@ip-172-31-44-71:/home/ubuntu# nano hello.go
+root@ip-172-31-44-71:/home/ubuntu# go run hello.go
+stat hello.go: no such file or directory
+root@ip-172-31-44-71:/home/ubuntu# nano hello.go
+root@ip-172-31-44-71:/home/ubuntu# go run hello.go
+Hello, World!
+root@ip-172-31-44-71:/home/ubuntu# sudo apt update
+Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Fetched 110 kB in 1s (97.6 kB/s)   
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+45 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@ip-172-31-44-71:/home/ubuntu# sudo apt install pdftk
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  alsa-topology-conf alsa-ucm-conf ca-certificates-java default-jre-headless java-common libapache-pom-java libasound2 libasound2-data
+  libavahi-client3 libavahi-common-data libavahi-common3 libbcprov-java libcommons-lang3-java libcommons-parent-java libcups2 libgraphite2-3
+  libharfbuzz0b liblcms2-2 libpcsclite1 openjdk-11-jre-headless pdftk-java
+Suggested packages:
+  default-jre libasound2-plugins alsa-utils libbcprov-java-doc libcommons-lang3-java-doc cups-common liblcms2-utils pcscd libnss-mdns
+  fonts-dejavu-extra fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic xpdf-utils
+The following NEW packages will be installed:
+  alsa-topology-conf alsa-ucm-conf ca-certificates-java default-jre-headless java-common libapache-pom-java libasound2 libasound2-data
+  libavahi-client3 libavahi-common-data libavahi-common3 libbcprov-java libcommons-lang3-java libcommons-parent-java libcups2 libgraphite2-3
+  libharfbuzz0b liblcms2-2 libpcsclite1 openjdk-11-jre-headless pdftk pdftk-java
+0 upgraded, 22 newly installed, 0 to remove and 45 not upgraded.
+Need to get 48.9 MB of archives.
+After this operation, 187 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 alsa-topology-conf all 1.2.5.1-2 [15.5 kB]
+Get:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libasound2-data all 1.2.6.1-1ubuntu1 [19.1 kB]
+Get:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libasound2 amd64 1.2.6.1-1ubuntu1 [390 kB]
+Get:4 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 alsa-ucm-conf all 1.2.6.3-1ubuntu1.8 [43.3 kB]
+Get:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 java-common all 0.72build2 [6782 B]
+Get:6 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libavahi-common-data amd64 0.8-5ubuntu5.1 [23.5 kB]
+Get:7 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libavahi-common3 amd64 0.8-5ubuntu5.1 [23.7 kB]
+Get:8 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libavahi-client3 amd64 0.8-5ubuntu5.1 [28.0 kB]
+Get:9 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcups2 amd64 2.4.1op1-1ubuntu4.7 [264 kB]
+Get:10 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 liblcms2-2 amd64 2.12~rc1-2build2 [159 kB]
+Get:11 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libgraphite2-3 amd64 1.3.14-1build2 [71.3 kB]
+Get:12 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libharfbuzz0b amd64 2.7.4-1ubuntu3.1 [352 kB]
+Get:13 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcsclite1 amd64 1.9.5-3ubuntu1 [19.8 kB]
+Get:14 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 openjdk-11-jre-headless amd64 11.0.20.1+1-0ubuntu1~22.04 [42.5 MB]
+Get:15 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 default-jre-headless amd64 2:1.11-72build2 [3042 B]
+Get:16 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates-java all 20190909ubuntu1.2 [12.1 kB]
+Get:17 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 libapache-pom-java all 18-1 [4720 B]
+Get:18 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 libbcprov-java all 1.68-5 [3457 kB]
+Get:19 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 libcommons-parent-java all 43-1 [10.8 kB]
+Get:20 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 libcommons-lang3-java all 3.11-1 [526 kB]
+Get:21 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 pdftk-java all 3.2.2-1 [942 kB]
+Get:22 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 pdftk amd64 2.02-5 [6228 B]
+Fetched 48.9 MB in 2s (26.5 MB/s)
+Selecting previously unselected package alsa-topology-conf.
+(Reading database ... 83277 files and directories currently installed.)
+Preparing to unpack .../00-alsa-topology-conf_1.2.5.1-2_all.deb ...
+Unpacking alsa-topology-conf (1.2.5.1-2) ...
+Selecting previously unselected package libasound2-data.
+Preparing to unpack .../01-libasound2-data_1.2.6.1-1ubuntu1_all.deb ...
+Unpacking libasound2-data (1.2.6.1-1ubuntu1) ...
+Selecting previously unselected package libasound2:amd64.
+Preparing to unpack .../02-libasound2_1.2.6.1-1ubuntu1_amd64.deb ...
+Unpacking libasound2:amd64 (1.2.6.1-1ubuntu1) ...
+Selecting previously unselected package alsa-ucm-conf.
+Preparing to unpack .../03-alsa-ucm-conf_1.2.6.3-1ubuntu1.8_all.deb ...
+Unpacking alsa-ucm-conf (1.2.6.3-1ubuntu1.8) ...
+Selecting previously unselected package java-common.
+Preparing to unpack .../04-java-common_0.72build2_all.deb ...
+Unpacking java-common (0.72build2) ...
+Selecting previously unselected package libavahi-common-data:amd64.
+Preparing to unpack .../05-libavahi-common-data_0.8-5ubuntu5.1_amd64.deb ...
+Unpacking libavahi-common-data:amd64 (0.8-5ubuntu5.1) ...
+Selecting previously unselected package libavahi-common3:amd64.
+Preparing to unpack .../06-libavahi-common3_0.8-5ubuntu5.1_amd64.deb ...
+Unpacking libavahi-common3:amd64 (0.8-5ubuntu5.1) ...
+Selecting previously unselected package libavahi-client3:amd64.
+Preparing to unpack .../07-libavahi-client3_0.8-5ubuntu5.1_amd64.deb ...
+Unpacking libavahi-client3:amd64 (0.8-5ubuntu5.1) ...
+Selecting previously unselected package libcups2:amd64.
+Preparing to unpack .../08-libcups2_2.4.1op1-1ubuntu4.7_amd64.deb ...
+Unpacking libcups2:amd64 (2.4.1op1-1ubuntu4.7) ...
+Selecting previously unselected package liblcms2-2:amd64.
+Preparing to unpack .../09-liblcms2-2_2.12~rc1-2build2_amd64.deb ...
+Unpacking liblcms2-2:amd64 (2.12~rc1-2build2) ...
+Selecting previously unselected package libgraphite2-3:amd64.
+Preparing to unpack .../10-libgraphite2-3_1.3.14-1build2_amd64.deb ...
+Unpacking libgraphite2-3:amd64 (1.3.14-1build2) ...
+Selecting previously unselected package libharfbuzz0b:amd64.
+Preparing to unpack .../11-libharfbuzz0b_2.7.4-1ubuntu3.1_amd64.deb ...
+Unpacking libharfbuzz0b:amd64 (2.7.4-1ubuntu3.1) ...
+Selecting previously unselected package libpcsclite1:amd64.
+Preparing to unpack .../12-libpcsclite1_1.9.5-3ubuntu1_amd64.deb ...
+Unpacking libpcsclite1:amd64 (1.9.5-3ubuntu1) ...
+Selecting previously unselected package openjdk-11-jre-headless:amd64.
+Preparing to unpack .../13-openjdk-11-jre-headless_11.0.20.1+1-0ubuntu1~22.04_amd64.deb ...
+Unpacking openjdk-11-jre-headless:amd64 (11.0.20.1+1-0ubuntu1~22.04) ...
+Selecting previously unselected package default-jre-headless.
+Preparing to unpack .../14-default-jre-headless_2%3a1.11-72build2_amd64.deb ...
+Unpacking default-jre-headless (2:1.11-72build2) ...
+Selecting previously unselected package ca-certificates-java.
+Preparing to unpack .../15-ca-certificates-java_20190909ubuntu1.2_all.deb ...
+Unpacking ca-certificates-java (20190909ubuntu1.2) ...
+Selecting previously unselected package libapache-pom-java.
+Preparing to unpack .../16-libapache-pom-java_18-1_all.deb ...
+Unpacking libapache-pom-java (18-1) ...
+Selecting previously unselected package libbcprov-java.
+Preparing to unpack .../17-libbcprov-java_1.68-5_all.deb ...
+Unpacking libbcprov-java (1.68-5) ...
+Selecting previously unselected package libcommons-parent-java.
+Preparing to unpack .../18-libcommons-parent-java_43-1_all.deb ...
+Unpacking libcommons-parent-java (43-1) ...
+Selecting previously unselected package libcommons-lang3-java.
+Preparing to unpack .../19-libcommons-lang3-java_3.11-1_all.deb ...
+Unpacking libcommons-lang3-java (3.11-1) ...
+Selecting previously unselected package pdftk-java.
+Preparing to unpack .../20-pdftk-java_3.2.2-1_all.deb ...
+Unpacking pdftk-java (3.2.2-1) ...
+Selecting previously unselected package pdftk.
+Preparing to unpack .../21-pdftk_2.02-5_amd64.deb ...
+Unpacking pdftk (2.02-5) ...
+Setting up libbcprov-java (1.68-5) ...
+Setting up libgraphite2-3:amd64 (1.3.14-1build2) ...
+Setting up liblcms2-2:amd64 (2.12~rc1-2build2) ...
+Setting up java-common (0.72build2) ...
+Setting up libasound2-data (1.2.6.1-1ubuntu1) ...
+Setting up libapache-pom-java (18-1) ...
+Setting up libavahi-common-data:amd64 (0.8-5ubuntu5.1) ...
+Setting up libpcsclite1:amd64 (1.9.5-3ubuntu1) ...
+Setting up alsa-topology-conf (1.2.5.1-2) ...
+Setting up libasound2:amd64 (1.2.6.1-1ubuntu1) ...
+Setting up libharfbuzz0b:amd64 (2.7.4-1ubuntu3.1) ...
+Setting up alsa-ucm-conf (1.2.6.3-1ubuntu1.8) ...
+Setting up libcommons-parent-java (43-1) ...
+Setting up libavahi-common3:amd64 (0.8-5ubuntu5.1) ...
+Setting up libcommons-lang3-java (3.11-1) ...
+Setting up libavahi-client3:amd64 (0.8-5ubuntu5.1) ...
+Setting up libcups2:amd64 (2.4.1op1-1ubuntu4.7) ...
+Setting up openjdk-11-jre-headless:amd64 (11.0.20.1+1-0ubuntu1~22.04) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+Setting up ca-certificates-java (20190909ubuntu1.2) ...
+head: cannot open '/etc/ssl/certs/java/cacerts' for reading: No such file or directory
+Adding debian:Certum_EC-384_CA.pem
+Adding debian:GlobalSign_Root_R46.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+Adding debian:COMODO_Certification_Authority.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+Adding debian:SecureSign_RootCA11.pem
+Adding debian:CFCA_EV_ROOT.pem
+Adding debian:SwissSign_Silver_CA_-_G2.pem
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+Adding debian:vTrus_ECC_Root_CA.pem
+Adding debian:QuoVadis_Root_CA_3.pem
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+Adding debian:e-Szigno_Root_CA_2017.pem
+Adding debian:Atos_TrustedRoot_2011.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G4.pem
+Adding debian:ePKI_Root_Certification_Authority.pem
+Adding debian:Certum_Trusted_Root_CA.pem
+Adding debian:GTS_Root_R3.pem
+Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+Adding debian:COMODO_RSA_Certification_Authority.pem
+Adding debian:Comodo_AAA_Services_root.pem
+Adding debian:AffirmTrust_Premium.pem
+Adding debian:Security_Communication_Root_CA.pem
+Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+Adding debian:Certainly_Root_E1.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068_2.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+Adding debian:GTS_Root_R1.pem
+Adding debian:Certainly_Root_R1.pem
+Adding debian:GlobalSign_Root_E46.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+Adding debian:Certum_Trusted_Network_CA.pem
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+Adding debian:AC_RAIZ_FNMT-RCM.pem
+Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+Adding debian:GTS_Root_R4.pem
+Adding debian:Certigna_Root_CA.pem
+Adding debian:vTrus_Root_CA.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+Adding debian:DigiCert_Global_Root_G3.pem
+Adding debian:Certum_Trusted_Network_CA_2.pem
+Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+Adding debian:COMODO_ECC_Certification_Authority.pem
+Adding debian:Secure_Global_CA.pem
+Adding debian:Hongkong_Post_Root_CA_1.pem
+Adding debian:E-Tugra_Global_Root_CA_RSA_v3.pem
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+Adding debian:QuoVadis_Root_CA_2.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+Adding debian:Trustwave_Global_Certification_Authority.pem
+Adding debian:HiPKI_Root_CA_-_G1.pem
+Adding debian:emSign_Root_CA_-_G1.pem
+Adding debian:Telia_Root_CA_v2.pem
+Adding debian:Buypass_Class_3_Root_CA.pem
+Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+Adding debian:Amazon_Root_CA_4.pem
+Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+Adding debian:TunTrust_Root_CA.pem
+Adding debian:Hongkong_Post_Root_CA_3.pem
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+Adding debian:DigiCert_Trusted_Root_G4.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+Adding debian:DigiCert_Global_Root_G2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:GlobalSign_Root_CA_-_R6.pem
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+Adding debian:Actalis_Authentication_Root_CA.pem
+Adding debian:CA_Disig_Root_R2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+Adding debian:E-Tugra_Global_Root_CA_ECC_v3.pem
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+Adding debian:XRamp_Global_CA_Root.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+Adding debian:NAVER_Global_Root_Certification_Authority.pem
+Adding debian:DigiCert_Global_Root_CA.pem
+Adding debian:certSIGN_ROOT_CA.pem
+Adding debian:emSign_ECC_Root_CA_-_G3.pem
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+Adding debian:ISRG_Root_X1.pem
+Adding debian:SecureTrust_CA.pem
+Adding debian:UCA_Extended_Validation_Root.pem
+Adding debian:Amazon_Root_CA_1.pem
+Adding debian:Amazon_Root_CA_3.pem
+Adding debian:Starfield_Class_2_CA.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+Adding debian:E-Tugra_Certification_Authority.pem
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+Adding debian:Amazon_Root_CA_2.pem
+Adding debian:SZAFIR_ROOT_CA2.pem
+Adding debian:TeliaSonera_Root_CA_v1.pem
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+Adding debian:emSign_Root_CA_-_C1.pem
+Adding debian:Buypass_Class_2_Root_CA.pem
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+Adding debian:AffirmTrust_Premium_ECC.pem
+Adding debian:GLOBALTRUST_2020.pem
+Adding debian:ANF_Secure_Server_Root_CA.pem
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+Adding debian:UCA_Global_G2_Root.pem
+Adding debian:certSIGN_Root_CA_G2.pem
+Adding debian:AffirmTrust_Commercial.pem
+Adding debian:Entrust_Root_Certification_Authority.pem
+Adding debian:Go_Daddy_Class_2_CA.pem
+Adding debian:Security_Communication_RootCA3.pem
+Adding debian:GlobalSign_Root_CA.pem
+Adding debian:AffirmTrust_Networking.pem
+Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+Adding debian:Security_Communication_ECC_RootCA1.pem
+Adding debian:Baltimore_CyberTrust_Root.pem
+Adding debian:Izenpe.com.pem
+Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+Adding debian:ACCVRAIZ1.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+Adding debian:Certigna.pem
+Adding debian:GTS_Root_R2.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+Adding debian:ISRG_Root_X2.pem
+done.
+Setting up default-jre-headless (2:1.11-72build2) ...
+Setting up pdftk-java (3.2.2-1) ...
+update-alternatives: using /usr/bin/pdftk.pdftk-java to provide /usr/bin/pdftk (pdftk) in auto mode
+Setting up pdftk (2.02-5) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.3) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for ca-certificates (20230311ubuntu0.22.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+
+done.
+done.
+Scanning processes...                                                                                                                            
+Scanning candidates...                                                                                                                           
+Scanning linux images...                                                                                                                         
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart getty@tty1.service
+ systemctl restart networkd-dispatcher.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+ systemctl restart user@1000.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@ip-172-31-44-71:/home/ubuntu# echo "This is some sample text that you want to save as a PDF." > output.txt
+root@ip-172-31-44-71:/home/ubuntu# pdftk output.txt output output.pdf
+Error: Invalid PDF: PDF header signature not found.
+Error: Failed to open input PDF file: 
+   output.txt
+Errors encountered.  No output created.
+Done.  Input errors, so no output created.
+root@ip-172-31-44-71:/home/ubuntu# sudo apt update
+Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+45 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@ip-172-31-44-71:/home/ubuntu# sudo apt install git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.34.1-1ubuntu1.10).
+git set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 45 not upgraded.
+root@ip-172-31-44-71:/home/ubuntu# sudo yum install git
+sudo: yum: command not found
+root@ip-172-31-44-71:/home/ubuntu# git config --global user.name "sunil shinde"
+root@ip-172-31-44-71:/home/ubuntu# git config --global user.email "sshinde917541@gmail.com"
+root@ip-172-31-44-71:/home/ubuntu# git clone https://github.com/yourusername/yourrepository.git
+Cloning into 'yourrepository'...
+Username for 'https://github.com': sunilshinde
+Password for 'https://sunilshinde@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/yourusername/yourrepository.git/'
+root@ip-172-31-44-71:/home/ubuntu# git clone https://github.com/Shinde9175/Aws.git
+Cloning into 'Aws'...
